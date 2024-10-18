@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Yeseva+One&display=swap");
+@import url("https://fonts.cdnfonts.com/css/georgia");
+
+/*
+
+font-family: "Lato", sans-serif;
+font-family: 'Georgia', sans-serif;
+font-family: "Yeseva One", serif;
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Yeseva One", serif;
+}
+
+:root {
+    --white-clr: rgb(255, 255, 255);
+    --black-clr: rgb(0, 0, 0);
+    --gold-clr: rgb(204, 153, 0);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+}
+
+.header-home {
+    color: var(--white-clr);
+    background: url(./img/background_1.jpg) center/cover;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    padding-inline: 10% 5%;
+    
+    background: linear-gradient(
+        to bottom,
+        rgba(from var(--black-clr) r g b / 0.6),
+        rgba(from var(--black-clr) r g b / 0.5),
+        rgba(from var(--black-clr) r g b / 0.4),
+        rgba(from var(--black-clr) r g b / 0.3),
+        rgba(from var(--black-clr) r g b / 0.2),
+        rgba(from var(--black-clr) r g b / 0.1),
+        rgba(from var(--black-clr) r g b / 0)
+    );
+}
+
+.logo {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    height: 100%;
+}
+
+header ul li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+}
+
+header ul li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: var(--white-clr);
+    padding-inline: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.active {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: var(--white-clr);
+    }
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+.home-section {
+    gap: 20px;
+    padding: 10% 15%;
+}
+
+.home-section h1 {
+    font-size: 80px;
+    text-shadow: 0 3px 2px rgba(from var(--black-clr) r g b / 0.5);
+}
+
+.home-section-buttons {
+    display: flex;
+    gap: 50px;
+}
+
+.home-section-buttons button {
+    font-size: 20px;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    border: 2px solid;
+    font-family: "Lato", sans-serif;
+
+    &:first-child {
+        color: var(--white-clr);
+        background-color: rgba(from var(--black-clr) r g b / 0.45);
+        border-color: var(--black-clr);
+    }
+
+    &:last-child {
+        color: var(--black-clr);
+        background-color: rgba(from var(--white-clr) r g b / 0.3);
+        border-color: var(--white-clr);
+    }
+}
