@@ -203,6 +203,7 @@ header ul li a {
     width: 60%;
     color: var(--white-clr);
     background-color: rgba(from var(--black-clr) r g b / 0.6);
+    border-radius: 5px;
 }
 
 .fine-ingredients-right h2 {
