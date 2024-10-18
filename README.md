@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-### [Visit us ➡️ Lambda Restaurant](<<https://kazimorwan498.github.io/Lambda_Restaurant/>)
+### [Visit us ➡️ Lambda Restaurant](https://kazimorwan498.github.io/Lambda_Restaurant/)
 
 ## 💫 About Me
 
