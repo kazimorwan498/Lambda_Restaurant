@@ -28,6 +28,7 @@ font-family: "Yeseva One", serif;
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 body {
@@ -37,7 +38,7 @@ body {
 
 .header-home {
     color: var(--white-clr);
-    background: url(./img/background_1.jpg) center/cover;
+    background: url(../img/background_1.jpg) center/cover fixed;
 }
 
 header {
@@ -47,7 +48,7 @@ header {
     height: 100px;
     width: 100%;
     padding-inline: 10% 5%;
-    
+
     background: linear-gradient(
         to bottom,
         rgba(from var(--black-clr) r g b / 0.6),
@@ -96,7 +97,7 @@ header ul li a {
     position: relative;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -126,6 +127,10 @@ header ul li a {
     text-shadow: 0 3px 2px rgba(from var(--black-clr) r g b / 0.5);
 }
 
+.home-section img {
+    margin-bottom: 20px;
+}
+
 .home-section-buttons {
     display: flex;
     gap: 50px;
@@ -149,4 +154,75 @@ header ul li a {
         background-color: rgba(from var(--white-clr) r g b / 0.3);
         border-color: var(--white-clr);
     }
+}
+
+.chef-section {
+    display: flex;
+    align-items: center;
+    padding: 10%;
+    background: url(../img/pattern-1.jpg) center;
+}
+
+.chef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chef h2 {
+    font-size: 50px;
+    color: var(--gold-clr);
+    margin-bottom: 20px;
+}
+
+.chef .divider {
+    margin-bottom: 40px;
+    scale: 1.1;
+}
+
+.chef p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: "Lato", sans-serif;
+}
+
+.fine-ingredients {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10%;
+    background: url(../img/background_2.jpg) center/cover fixed;
+}
+
+.fine-ingredients-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10%;
+    width: 60%;
+    color: var(--white-clr);
+    background-color: rgba(from var(--black-clr) r g b / 0.6);
+}
+
+.fine-ingredients-right h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.fine-ingredients-right > img {
+    margin-bottom: 30px;
+}
+
+.fine-ingredients-right p {
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 70px;
+}
+
+.spice img {
+    scale: 1.2;
+    border-radius: 50%;
+    margin-inline: 20px;
+    border: 3px solid rgba(from var(--white-clr) r g b / 0.3);
 }
