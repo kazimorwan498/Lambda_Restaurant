@@ -90,7 +90,6 @@ header ul li {
 header ul li a {
     display: flex;
     align-items: center;
-    height: 100%;
     font-size: 20px;
     color: var(--white-clr);
     padding-inline: 10px;
@@ -260,6 +259,7 @@ header ul li a {
 }
 
 .food > div {
+    position: relative;
     margin-bottom: 40px;
 
     &:last-child {
@@ -269,5 +269,31 @@ header ul li a {
 
 .food > div > p {
     color: rgba(from var(--black-clr) r g b / 0.7);
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
+}
+
+@container style(--isSpacial: true) {
+    .food > div::after {
+        content: "Spacial";
+        position: absolute;
+        top: -34px;
+        right: -6px;
+        color: var(--white-clr);
+        background-color: var(--gold-clr);
+        padding: 5px 10px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .food > div::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        color: var(--white-clr);
+        background-color: transparent;
+        outline: 1px solid var(--gold-clr);
+        outline-offset: 5px;
+    }
 }
