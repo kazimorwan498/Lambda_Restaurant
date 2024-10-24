@@ -36,9 +36,15 @@ body {
     height: auto;
 }
 
+/* Global Class Start */
+.text-gold {
+    color: var(--gold-clr);
+}
+/* Global Class End */
+
 .header-home {
     color: var(--white-clr);
-    background: url(../img/background_1.jpg) center/cover fixed;
+    background: url(../img/background_1.jpg) center/cover;
 }
 
 header {
@@ -172,7 +178,6 @@ header ul li a {
 
 .chef h2 {
     font-size: 50px;
-    color: var(--gold-clr);
     margin-bottom: 20px;
 }
 
@@ -192,7 +197,7 @@ header ul li a {
     align-items: center;
     justify-content: flex-end;
     padding: 10%;
-    background: url(../img/background_2.jpg) center/cover fixed;
+    background: url(../img/background_2.jpg) center/cover;
 }
 
 .fine-ingredients-right {
@@ -226,4 +231,43 @@ header ul li a {
     border-radius: 50%;
     margin-inline: 20px;
     border: 3px solid rgba(from var(--white-clr) r g b / 0.3);
+
+    &:hover {
+        border-color: var(--white-clr);
+    }
+}
+
+.menu-section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+    background: url(../img/pattern-2.jpg);
+    padding: 5% 10%;
+}
+
+.menu-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding: 10%;
+}
+
+.food {
+    width: 100%;
+}
+
+.food > div {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.food > div > p {
+    color: rgba(from var(--black-clr) r g b / 0.7);
+    font-family: 'Lato', sans-serif;
 }
