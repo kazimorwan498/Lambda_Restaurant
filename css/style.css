@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 @import url("https://fonts.cdnfonts.com/css/georgia");
 
 /*
@@ -37,19 +38,6 @@ font-family: "Yeseva One", serif;
 }
 
 @container style(--isSpacial: true) {
-    .food-category > div::after {
-        content: "Spacial";
-        position: absolute;
-        top: -34px;
-        right: -6px;
-        color: var(--white-clr);
-        background-color: var(--gold-clr);
-        padding: 5px 10px;
-        font-size: 12px;
-        letter-spacing: 1px;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-    }
     .food-category > div::before {
         content: "";
         position: absolute;
@@ -63,6 +51,20 @@ font-family: "Yeseva One", serif;
         outline-offset: 5px;
         border-radius: 2px;
         border-top-right-radius: 0;
+    }
+
+    .food-category > div::after {
+        content: "Spacial";
+        position: absolute;
+        top: -33px;
+        right: -6px;
+        color: var(--white-clr);
+        background-color: var(--gold-clr);
+        padding: 5px 20px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
     }
 }
 
@@ -346,7 +348,42 @@ header ul li a {
     }
 }
 
+.food-category > div > a {
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    cursor: pointer;
+}
+
 .food-category > div > p {
+    position: relative;
     color: rgba(from var(--black-clr) r g b / 0.7);
     font-family: var(--font-lato);
+    z-index: 1;
+}
+
+.guest-reviews {
+    width: 100%;
+    padding: 10%;
+    background: url(../img/background_3.jpg) center/cover no-repeat;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding: 5%;
+    margin: auto;
+    background-color: rgba(from var(--black-clr) r g b / 0.6);
+}
+
+.reviews h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.reviews img {
+    margin-bottom: 30px;
 }
