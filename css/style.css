@@ -14,7 +14,7 @@ font-family: "Yeseva One", serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Yeseva One", serif;
+    font-family: var(--font-yeseva);
 }
 
 :root {
@@ -25,6 +25,7 @@ font-family: "Yeseva One", serif;
     --scale-up: 1.05;
     --scale-down: 0.95;
     --font-lato: "Lato", sans-serif;
+    --font-yeseva: "Yeseva One", serif;
 }
 
 ::-webkit-scrollbar {
@@ -33,10 +34,23 @@ font-family: "Yeseva One", serif;
 
 /** Global CSS Start **/
 
+.text-h1 {
+    font-size: 90px;
+}
+
+.text-h2 {
+    font-size: 50px;
+}
+
+.text-h3 {
+    font-size: 30px;
+}
+
 .text-gold {
     color: var(--gold-clr);
 }
 
+/* Spacial Menu Card Design */
 @container style(--isSpacial: true) {
     .food-category > div::before {
         content: "";
@@ -80,11 +94,13 @@ body {
     height: auto;
 }
 
+/* Header & Home Section Background */
 .header-home {
     color: var(--white-clr);
     background: url(../img/background_1.jpg) center/cover;
 }
 
+/* Design Header Section */
 header {
     display: flex;
     align-items: center;
@@ -106,11 +122,18 @@ header {
     );
 }
 
+/* Logo Customization */
 .logo {
-    margin-top: 4px;
+    height: 100%;
+    padding-block: 4px;
     cursor: pointer;
+
+    & img {
+        height: 100%;
+    }
 }
 
+/* Design Navbar */
 header ul {
     display: flex;
     align-items: center;
@@ -119,6 +142,7 @@ header ul {
     height: 100%;
 }
 
+/* Navbar Items */
 header ul li {
     display: flex;
     align-items: center;
@@ -126,6 +150,7 @@ header ul li {
     list-style: none;
 }
 
+/* Navbar Links */
 header ul li a {
     display: flex;
     align-items: center;
@@ -146,7 +171,8 @@ header ul li a {
     }
 }
 
-.active {
+/* Design Active Nav Item */
+header ul li:first-child {
     position: relative;
 
     &::before {
@@ -160,6 +186,7 @@ header ul li a {
     }
 }
 
+/* Design Social Media Icons */
 .icons {
     display: flex;
     gap: 20px;
@@ -191,12 +218,12 @@ header ul li a {
 }
 
 .home-section h1 {
-    font-size: 80px;
+    margin-bottom: 30px;
     text-shadow: 0 3px 2px rgba(from var(--black-clr) r g b / 0.5);
 }
 
 .home-section img {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .home-section-buttons {
@@ -248,7 +275,6 @@ header ul li a {
 }
 
 .chef h2 {
-    font-size: 50px;
     margin-bottom: 20px;
 }
 
@@ -284,7 +310,6 @@ header ul li a {
 
 .fine-ingredients-right h2 {
     margin-bottom: 20px;
-    font-size: 50px;
 }
 
 .fine-ingredients-right > img {
@@ -332,7 +357,7 @@ header ul li a {
     gap: 20px;
     width: 100%;
     height: auto;
-    padding: 10%;
+    padding: 5%;
 }
 
 .food-category {
@@ -364,7 +389,7 @@ header ul li a {
 
 .guest-reviews {
     width: 100%;
-    padding: 10%;
+    padding: 7% 10%;
     background: url(../img/background_3.jpg) center/cover no-repeat;
 }
 
@@ -372,18 +397,36 @@ header ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    padding: 5%;
+    width: 70%;
+    padding: 5% 7%;
     margin: auto;
     background-color: rgba(from var(--black-clr) r g b / 0.6);
+    text-align: center;
 }
 
 .reviews h2 {
-    font-size: 50px;
     margin-bottom: 20px;
     text-transform: capitalize;
 }
 
-.reviews img {
+.reviews > img {
     margin-bottom: 30px;
+}
+
+.reviews > div > p {
+    position: relative;
+    font-size: 23px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.reviews > div > p > img {
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    filter: contrast(0);
+}
+
+.reviews > div > span {
+    font-family: var(--font-lato);
 }
