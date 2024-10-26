@@ -5,7 +5,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="Kazi Morwan" />
         <title>Lambda Restaurant | Kazi Morwan</title>
-        <link rel="stylesheet" href="./css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="./img/logo.png"
+            type="image/x-icon"
+            media="(prefers-color-scheme: dark)"
+        />
+        <link
+            rel="shortcut icon"
+            href="./img/logo-dark.png"
+            type="image/x-icon"
+            media="(prefers-color-scheme: light)"
+        />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -16,12 +27,8 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"
-            defer
-        ></script>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
     </head>
 
     <body>
@@ -409,19 +416,18 @@
                         us hard to resist! Stop in today and check us out!
                     </p>
 
-                    <span class="fs-5">
-                        - food inc, New York
-                    </span>
+                    <span class="fs-5"> - food inc, New York </span>
                 </div>
             </div>
         </section>
 
-        <section class="booking-section" id="reservation">
-            <div class="booking-section-left">
-                <img src="./img/reservation.jpg" alt="" />
+        <section class="reservation-section" id="reservation">
+            <div>
+                <img src="./img/reservation_1.jpg" alt="reservation" />
+                <img src="./img/reservation_2.jpg" alt="reservation" />
             </div>
 
-            <div class="booking-section-right">
+            <div>
                 <h2>just the right food</h2>
 
                 <img
@@ -434,41 +440,51 @@
                     If you've been to one of our restaurants, you've seen - and
                     tasted - what keeps our customers coming back for more.
                     Perfect materials and freshly baked food.
-                </p>
-
-                <p>
+                    <br /><br />
                     Delicious Lambda cakes, muffins, and gourmet coffees make us
                     hard to resist! Stop in today and check us out! Perfect
                     materials and freshly baked food.
                 </p>
 
                 <form action="#">
-                    <div class="name">
-                        <label for="input-name">Name</label>
+                    <div>
+                        <label class="form-label" for="input-name">Name</label>
                         <input
+                            class="form-control"
                             type="text"
                             id="input-name"
-                            placeholder="Your Name"
+                            placeholder="Your Name" required
                         />
                     </div>
-                    <div class="email">
-                        <label for="input-email">Email</label>
+                    <div>
+                        <label class="form-label" for="input-email">
+                            Email
+                        </label>
                         <input
+                            class="form-control"
                             type="email"
                             id="input-email"
-                            placeholder="Your Email"
+                            placeholder="Your Email" required
                         />
                     </div>
-                    <div class="date">
-                        <label for="input-date">Date</label>
-                        <input type="date" id="input-date" placeholder="Date" />
-                    </div>
-                    <div class="party-number">
-                        <label for="input-party-number">Name</label>
+                    <div>
+                        <label class="form-label" for="input-date">Date</label>
                         <input
+                            class="form-control"
+                            type="date"
+                            id="input-date"
+                            placeholder="Date" required
+                        />
+                    </div>
+                    <div>
+                        <label class="form-label" for="input-party-number">
+                            Party Number
+                        </label>
+                        <input
+                            class="form-control"
                             type="number"
                             id="input-party-number"
-                            placeholder="Party Number"
+                            placeholder="Party Number" required
                         />
                     </div>
 
@@ -525,5 +541,11 @@
                 </div>
             </div>
         </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>
