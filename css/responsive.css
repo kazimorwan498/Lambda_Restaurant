@@ -1,5 +1,5 @@
-@media screen and (max-width: 1300px) {
-    .icons {
-        display: none;
-    }
+@media screen and (max-width: 81.25rem) {
+  .icons {
+    display: none;
+  }
 }

@@ -11,503 +11,536 @@ font-family: "Yeseva One", serif;
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-yeseva);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-yeseva);
 }
 
 :root {
-    --white-clr: rgb(255, 255, 255);
-    --black-clr: rgb(0, 0, 0);
-    --gold-clr: rgb(204, 153, 0);
-    --transition-02s: all 0.2s;
-    --scale-up: 1.05;
-    --scale-down: 0.95;
-    --font-lato: "Lato", sans-serif;
-    --font-yeseva: "Yeseva One", serif;
-}
-
-::-webkit-scrollbar {
-    display: none;
+  --white-clr: rgb(255, 255, 255);
+  --black-clr: rgb(0, 0, 0);
+  --gold-clr: rgb(204, 153, 0);
+  --transition-02s: all 0.2s;
+  --scale-up: 1.05;
+  --scale-down: 0.95;
+  --font-lato: "Lato", sans-serif;
+  --font-yeseva: "Yeseva One", serif;
 }
 
 /** Global CSS Start **/
 
 .text-h1 {
-    font-size: 90px;
+  font-size: 5.625rem;
 }
 
 .text-h2 {
-    font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .text-h3 {
-    font-size: 30px;
+  font-size: 1.875rem;
 }
 
 .text-gold {
+  color: var(--gold-clr);
+}
+
+/** Global CSS End **/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+/* Header & Home Section Background */
+.header-home {
+  color: var(--white-clr);
+  background: url(../img/background_1.jpg) center/cover;
+}
+
+/* Design Header Section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.25rem;
+  width: 100%;
+  padding-inline: 5%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(from var(--black-clr) r g b / 0.6),
+    rgba(from var(--black-clr) r g b / 0.5),
+    rgba(from var(--black-clr) r g b / 0.4),
+    rgba(from var(--black-clr) r g b / 0.3),
+    rgba(from var(--black-clr) r g b / 0.2),
+    rgba(from var(--black-clr) r g b / 0.1),
+    rgba(from var(--black-clr) r g b / 0),
+    rgba(from var(--black-clr) r g b / 0)
+  );
+}
+
+/* Logo Customization */
+.logo {
+  height: 100%;
+  padding-block: 0.25rem;
+  cursor: pointer;
+
+  & img {
+    height: 100%;
+  }
+}
+
+/* Design Navbar */
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0;
+  height: 100%;
+}
+
+/* Navbar Items */
+header ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+
+/* Navbar Links */
+header ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  color: var(--white-clr);
+  padding-inline: 1.25rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: center;
+  transition: var(--transition-02s);
+
+  &:hover {
+    scale: var(--scale-up);
+  }
+
+  &:active {
+    scale: var(--scale-down);
+  }
+}
+
+/* Design Active Nav Item */
+header ul li:first-child {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1875rem;
+    background-color: var(--white-clr);
+  }
+}
+
+/* Design Social Media Icons */
+.icons {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1.25rem;
+}
+
+.icons i {
+  padding: 0.625rem;
+  border: 0.125rem solid var(--white-clr);
+  border-radius: 50%;
+  transition: var(--transition-02s);
+  cursor: pointer;
+
+  &:hover {
     color: var(--gold-clr);
+    background-color: rgba(from var(--black-clr) r g b / 0.3);
+    border-color: var(--gold-clr);
+    scale: var(--scale-up);
+  }
+
+  &:active {
+    scale: var(--scale-down);
+  }
+}
+
+.home-section {
+  gap: 1.25rem;
+  padding: 10% 15%;
+}
+
+.home-section h1 {
+  margin-bottom: 1.875rem;
+  text-shadow: 0 0.1875rem 0.125rem rgba(from var(--black-clr) r g b / 0.5);
+}
+
+.home-section img {
+  margin-bottom: 2.5rem;
+}
+
+.home-section-buttons {
+  display: flex;
+  gap: 3.125rem;
+}
+
+.home-section-buttons button {
+  font-size: 1.25rem;
+  padding: 0.625rem 2.5rem;
+  text-transform: uppercase;
+  border: 0.125rem solid;
+  font-family: var(--font-lato);
+  transition: var(--transition-02s);
+
+  &:first-child {
+    color: var(--white-clr);
+    background-color: rgba(from var(--black-clr) r g b / 0.45);
+    border-color: var(--black-clr);
+  }
+
+  &:last-child {
+    color: var(--black-clr);
+    background-color: rgba(from var(--white-clr) r g b / 0.3);
+    border-color: var(--white-clr);
+  }
+
+  &:hover {
+    scale: var(--scale-up);
+  }
+
+  &:active {
+    scale: var(--scale-down);
+  }
+}
+
+.chef-section {
+  display: flex;
+  align-items: center;
+  padding: 10%;
+  background: url(../img/pattern-1.jpg) center;
+}
+
+.chef {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chef h2 {
+  margin-bottom: 1.25rem;
+}
+
+.chef .divider {
+  margin-bottom: 2.5rem;
+  scale: var(--scale-up);
+}
+
+.chef p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--font-lato);
+}
+
+/* Ingredients Section */
+.fine-ingredients-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10%;
+  background: url(../img/background_2.jpg) center/cover;
+}
+
+.fine-ingredients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 10%;
+  width: 70%;
+  color: var(--white-clr);
+  background-color: rgba(from var(--black-clr) r g b / 0.6);
+  border-radius: 0.3125rem;
+}
+
+.fine-ingredients h2 {
+  margin-bottom: 1.25rem;
+}
+
+.fine-ingredients > img {
+  margin-bottom: 1.875rem;
+}
+
+.fine-ingredients p {
+  font-size: 1.25rem;
+  font-family: var(--font-lato);
+  margin-bottom: 4.375rem;
+}
+
+.spice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.spice img {
+  display: inline-block;
+  height: 8.125rem;
+  border-radius: 50%;
+  border: 0.1875rem solid rgba(from var(--white-clr) r g b / 0.3);
+
+  &:hover {
+    border-color: var(--white-clr);
+  }
+}
+
+/* Food Menu Section */
+.food-menu-section {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  background: url(../img/pattern-2.jpg);
+  padding: 5% 10%;
+}
+
+.food-menu-section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  height: auto;
+  padding: 5%;
+}
+
+.food-category {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.food-category > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  position: relative;
 }
 
 /* Spacial Menu Card Design */
-@container style(--isSpacial: true) {
-    .food-category > div::before {
+/* @container style(--isSpacial: true) {
+    .food-category>div::before {
         content: "";
         position: absolute;
         top: 0;
         right: 0;
         width: 100%;
         height: 100%;
-        color: var(--white-clr);
         background-color: transparent;
-        outline: 1px solid var(--gold-clr);
-        outline-offset: 5px;
-        border-radius: 2px;
+        outline: 0.0625rem solid rgba(from var(--gold-clr) r g b / 0.5);
+        border-radius: 0.125rem;
         border-top-right-radius: 0;
     }
 
-    .food-category > div::after {
+    .food-category>div::after {
         content: "Spacial";
         position: absolute;
-        top: -33px;
-        right: -6px;
+        top: -2.36rem;
+        right: -0.375rem;
         color: var(--white-clr);
-        background-color: var(--gold-clr);
-        padding: 5px 20px;
-        font-size: 12px;
-        letter-spacing: 3px;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
+        background-color: rgba(from var(--gold-clr) r g b / 0.7);
+        padding: 0.3125rem 1.25rem;
+        font-size: 0.9rem;
+        border-top-left-radius: 0.125rem;
+        border-top-right-radius: 0.125rem;
+        font-family: var(--font-lato);
     }
-}
-
-/** Global CSS End **/
-
-html {
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-body {
-    width: 100vw;
-    height: auto;
-}
-
-/* Header & Home Section Background */
-.header-home {
-    color: var(--white-clr);
-    background: url(../img/background_1.jpg) center/cover;
-}
-
-/* Design Header Section */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    width: 100%;
-    padding-inline: 5%;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(from var(--black-clr) r g b / 0.6),
-        rgba(from var(--black-clr) r g b / 0.5),
-        rgba(from var(--black-clr) r g b / 0.4),
-        rgba(from var(--black-clr) r g b / 0.3),
-        rgba(from var(--black-clr) r g b / 0.2),
-        rgba(from var(--black-clr) r g b / 0.1),
-        rgba(from var(--black-clr) r g b / 0),
-        rgba(from var(--black-clr) r g b / 0)
-    );
-}
-
-/* Logo Customization */
-.logo {
-    height: 100%;
-    padding-block: 4px;
-    cursor: pointer;
-
-    & img {
-        height: 100%;
-    }
-}
-
-/* Design Navbar */
-header ul {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-    height: 100%;
-}
-
-/* Navbar Items */
-header ul li {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    list-style: none;
-}
-
-/* Navbar Links */
-header ul li a {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    color: var(--white-clr);
-    padding-inline: 20px;
-    text-decoration: none;
-    text-transform: capitalize;
-    text-align: center;
-    transition: var(--transition-02s);
-
-    &:hover {
-        scale: var(--scale-up);
-    }
-
-    &:active {
-        scale: var(--scale-down);
-    }
-}
-
-/* Design Active Nav Item */
-header ul li:first-child {
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background-color: var(--white-clr);
-    }
-}
-
-/* Design Social Media Icons */
-.icons {
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-}
-
-.icons i {
-    padding: 10px;
-    border: 2px solid var(--white-clr);
-    border-radius: 50%;
-    transition: var(--transition-02s);
-    cursor: pointer;
-
-    &:hover {
-        color: var(--gold-clr);
-        background-color: rgba(from var(--black-clr) r g b / 0.3);
-        border-color: var(--gold-clr);
-        scale: var(--scale-up);
-    }
-
-    &:active {
-        scale: var(--scale-down);
-    }
-}
-
-.home-section {
-    gap: 20px;
-    padding: 10% 15%;
-}
-
-.home-section h1 {
-    margin-bottom: 30px;
-    text-shadow: 0 3px 2px rgba(from var(--black-clr) r g b / 0.5);
-}
-
-.home-section img {
-    margin-bottom: 40px;
-}
-
-.home-section-buttons {
-    display: flex;
-    gap: 50px;
-}
-
-.home-section-buttons button {
-    font-size: 20px;
-    padding: 10px 40px;
-    text-transform: uppercase;
-    border: 2px solid;
-    font-family: var(--font-lato);
-    transition: var(--transition-02s);
-
-    &:first-child {
-        color: var(--white-clr);
-        background-color: rgba(from var(--black-clr) r g b / 0.45);
-        border-color: var(--black-clr);
-    }
-
-    &:last-child {
-        color: var(--black-clr);
-        background-color: rgba(from var(--white-clr) r g b / 0.3);
-        border-color: var(--white-clr);
-    }
-
-    &:hover {
-        scale: var(--scale-up);
-    }
-
-    &:active {
-        scale: var(--scale-down);
-    }
-}
-
-.chef-section {
-    display: flex;
-    align-items: center;
-    padding: 10%;
-    background: url(../img/pattern-1.jpg) center;
-}
-
-.chef {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.chef h2 {
-    margin-bottom: 20px;
-}
-
-.chef .divider {
-    margin-bottom: 40px;
-    scale: var(--scale-up);
-}
-
-.chef p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    font-family: var(--font-lato);
-}
-
-.fine-ingredients {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 10%;
-    background: url(../img/background_2.jpg) center/cover;
-}
-
-.fine-ingredients-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5% 10%;
-    width: 70%;
-    color: var(--white-clr);
-    background-color: rgba(from var(--black-clr) r g b / 0.6);
-    border-radius: 5px;
-}
-
-.fine-ingredients-right h2 {
-    margin-bottom: 20px;
-}
-
-.fine-ingredients-right > img {
-    margin-bottom: 30px;
-}
-
-.fine-ingredients-right p {
-    font-size: 20px;
-    font-family: var(--font-lato);
-    margin-bottom: 70px;
-}
-
-.spice {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.spice img {
-    display: inline-block;
-    height: 130px;
-    border-radius: 50%;
-    border: 3px solid rgba(from var(--white-clr) r g b / 0.3);
-
-    &:hover {
-        border-color: var(--white-clr);
-    }
-}
-
-.food-menu-section {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-items: center;
-    background: url(../img/pattern-2.jpg);
-    padding: 5% 10%;
-}
-
-.food-menu-section > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    height: auto;
-    padding: 5%;
-}
-
-.food-category {
-    width: 100%;
-}
-
-.food-category > div {
-    position: relative;
-    margin-bottom: 40px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
+} */
 
 .food-category > div > a {
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .food-category > div > p {
-    position: relative;
-    color: rgba(from var(--black-clr) r g b / 0.7);
-    font-family: var(--font-lato);
-    z-index: 1;
+  position: relative;
+  color: rgba(from var(--black-clr) r g b / 0.5);
+  font-family: var(--font-lato);
+  z-index: 1;
 }
 
 .guest-reviews {
-    width: 100%;
-    padding: 7% 10%;
-    background: url(../img/background_3.jpg) center/cover no-repeat;
+  width: 100%;
+  padding: 7% 10%;
+  background: url(../img/background_3.jpg) center/cover no-repeat;
 }
 
 .reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
-    padding: 5% 7%;
-    margin: auto;
-    background-color: rgba(from var(--black-clr) r g b / 0.6);
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  padding: 5% 7%;
+  margin: auto;
+  color: var(--white-clr);
+  background-color: rgba(from var(--black-clr) r g b / 0.8);
+  text-align: center;
+  border-radius: 0.125rem;
 }
 
 .reviews h2 {
-    margin-bottom: 20px;
-    text-transform: capitalize;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
 }
 
 .reviews > img {
-    margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .reviews > div > p {
-    position: relative;
-    font-size: 23px;
-    line-height: 2;
-    margin-bottom: 30px;
+  position: relative;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  line-height: 1.8;
+  margin-bottom: 1.875rem;
 }
 
 .reviews > div > p > img {
-    position: absolute;
-    top: -20px;
-    left: -50px;
-    filter: contrast(0);
+  position: absolute;
+  top: -1.25rem;
+  left: -3.125rem;
+  filter: contrast(0);
 }
 
 .reviews > div > span {
-    font-family: var(--font-lato);
+  font-family: var(--font-lato);
+  font-size: 1.4rem;
 }
 
+/* Reservation Section */
 .reservation-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 10%;
-    padding: 10%;
-    background: url(../img/pattern-1.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 50px;
+  padding: 10%;
+  background: url(../img/pattern-1.jpg);
 }
 
-.reservation-section > div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+.reservation-section-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.875rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  min-width: 550px;
+  max-width: 630px;
 }
 
-.reservation-section > div:first-child > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.reservation-section-img > div {
+  width: 330px;
+  height: 650px;
 }
 
-.reservation-section > div:last-child {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    column-gap: 10%;
+.reservation-section-img > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.reservation-section-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  column-gap: 10%;
+  max-width: 500px;
 }
 
-form > div {
-    margin-top: 30px;
-    font-family: var(--font-lato);
+.reservation-section-form-h2 {
+  color: var(--gold-clr);
+  margin-bottom: 1.25rem;
+  font-size: 3.125rem;
+  text-align: center;
 }
 
-form > div > label {
-    color: var(--gold-clr);
-    font-family: var(--font-lato);
-    font-weight: bolder;
+.reservation-section-form > img {
+  margin-bottom: 1.875rem;
 }
 
-.form-control:focus {
-    border-color: var(--gold-clr) !important;
-    box-shadow: 0 0 0 0.25rem rgba(from var(--gold-clr) r g b / 0.3);
+.reservation-section-form > p {
+  font-family: var(--font-lato);
+  text-align: center;
+  color: rgba(from var(--black-clr) r g b / 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-form > div:first-child,
-form > div:nth-child(3) {
-    margin-right: 30px;
+.reservation-section-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-form button {
-    grid-column: span 2;
-    margin-inline: auto;
-    margin-top: 30px;
-    color: var(--white-clr);
-    background-color: var(--gold-clr);
-    font-family: var(--font-lato);
-    padding: 10px 70px;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    transition: var(--transition-02s);
+.reservation-section-form form > div {
+  margin-top: 1.875rem;
+  font-family: var(--font-lato);
+}
 
-    &:hover {
-        scale: var(--scale-up);
-    }
+.reservation-section-form form > div > label {
+  color: var(--gold-clr);
+  font-family: var(--font-lato);
+  font-weight: bolder;
+}
 
-    &:active {
-        scale: var(--scale-down);
-    }
+.reservation-section-form .form-control:focus {
+  border-color: var(--gold-clr) !important;
+  box-shadow: 0 0 0 0.25rem rgba(from var(--gold-clr) r g b / 0.3);
+}
+
+.reservation-section-form form > div:first-child,
+.reservation-section-form form > div:nth-child(3) {
+  margin-right: 1.875rem;
+}
+
+.reservation-section-form form button {
+  grid-column: span 2;
+  margin-inline: auto;
+  margin-top: 1.875rem;
+  color: var(--white-clr);
+  background-color: var(--gold-clr);
+  font-family: var(--font-lato);
+  padding: 0.625rem 4.375rem;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  transition: var(--transition-02s);
+
+  &:hover {
+    scale: var(--scale-up);
+  }
+
+  &:active {
+    scale: var(--scale-down);
+  }
 }
