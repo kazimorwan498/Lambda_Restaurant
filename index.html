@@ -19,51 +19,53 @@
 
   <body>
     <section class="header-home">
-      <!-- Header Section -->
-      <header>
-        <div class="logo">
-          <img src="./img/logo.png" alt="Logo" height="100" onclick="window.location.reload()" />
-        </div>
+      <div class="bg-shadow">
+        <!-- Header Section -->
+        <header>
+          <div class="logo">
+            <img src="./img/logo.png" alt="Logo" height="100" onclick="window.location.reload()" />
+          </div>
 
-        <ul class="navbar pt-0">
-          <li class="nav-item">
-            <a href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="#about">about</a>
-          </li>
-          <li class="nav-item">
-            <a href="#ingredients">ingredients</a>
-          </li>
-          <li class="nav-item">
-            <a href="#menu">menu</a>
-          </li>
-          <li class="nav-item">
-            <a href="#reviews">reviews</a>
-          </li>
-          <li class="nav-item">
-            <a href="#reservation">reservation</a>
-          </li>
-        </ul>
+          <ul class="navbar pt-0">
+            <li class="nav-item">
+              <a href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="#ingredients">ingredients</a>
+            </li>
+            <li class="nav-item">
+              <a href="#menu">menu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews">reviews</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reservation">reservation</a>
+            </li>
+          </ul>
 
-        <div class="icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-x-twitter"></i>
-        </div>
-      </header>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </header>
 
-      <!-- Home Section -->
-      <main class="home-section d-flex flex-column justify-content-center align-items-center" id="home">
-        <h1 class="text-center text-h1">the right ingredients for the right food</h1>
+        <!-- Home Section -->
+        <main class="home-section d-flex flex-column justify-content-center align-items-center" id="home">
+          <h1 class="text-center text-h1">the right ingredients for the right food</h1>
 
-        <img src="./img/divider.svg" alt="divider" height="40" />
+          <img src="./img/divider.svg" alt="divider" height="40" />
 
-        <div class="home-section-buttons">
-          <button onclick="window.location.href = '#reservation'">book a table</button>
-          <button onclick="window.location.href = '#menu'">see the menu</button>
-        </div>
-      </main>
+          <div class="home-section-buttons">
+            <button onclick="window.location.href = '#reservation'">book a table</button>
+            <button onclick="window.location.href = '#menu'">see the menu</button>
+          </div>
+        </main>
+      </div>
     </section>
 
     <!-- Cook Related Section -->
@@ -264,7 +266,7 @@
       </div>
 
       <div class="reservation-section-form">
-        <h2 class="reservation-section-form-h2">just the right food</h2>
+        <h2 class="reservation-section-form-h2">Just the right food</h2>
 
         <img src="./img/divider_gold.svg" alt="divider_gold" height="25" />
 
@@ -288,7 +290,18 @@
           </div>
           <div>
             <label class="form-label" for="input-party-number">Party Number</label>
-            <input class="form-control" type="number" id="input-party-number" placeholder="Party Number" required />
+            <select class="form-control" id="input-party-number">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
           <button type="submit">Book now!</button>
         </form>

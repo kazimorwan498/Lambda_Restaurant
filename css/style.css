@@ -63,6 +63,11 @@ body {
   background: url(../img/background_1.jpg) center/cover;
 }
 
+.bg-shadow {
+  background: rgba(from var(--black-clr) r g b / 0.3);
+  height: 100%;
+}
+
 /* Design Header Section */
 header {
   display: flex;
@@ -127,6 +132,7 @@ header ul li a {
 
   &:hover {
     scale: var(--scale-up);
+    color: var(--gold-clr);
   }
 
   &:active {
@@ -439,7 +445,7 @@ header ul li:first-child {
 .reservation-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   column-gap: 50px;
   padding: 10%;
   background: url(../img/pattern-1.jpg);
@@ -480,7 +486,7 @@ header ul li:first-child {
 .reservation-section-form-h2 {
   color: var(--gold-clr);
   margin-bottom: 1.25rem;
-  font-size: 3.125rem;
+  font-size: 2.6rem;
   text-align: center;
 }
 
@@ -489,12 +495,16 @@ header ul li:first-child {
 }
 
 .reservation-section-form > p {
-  font-family: var(--font-lato);
   text-align: center;
-  color: rgba(from var(--black-clr) r g b / 0.5);
+  color: rgba(from var(--black-clr) r g b / 0.7);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 430px;
+  margin-inline: auto;
+  & > span {
+    font-family: var(--font-lato);
+  }
 }
 
 .reservation-section-form form {
@@ -528,9 +538,9 @@ header ul li:first-child {
   margin-inline: auto;
   margin-top: 1.875rem;
   color: var(--white-clr);
-  background-color: var(--gold-clr);
+  background-color: rgba(from var(--gold-clr) r g b / 0.9);
   font-family: var(--font-lato);
-  padding: 0.625rem 4.375rem;
+  padding: 0.5rem 4.6rem;
   font-size: 1.25rem;
   border: none;
   outline: none;
